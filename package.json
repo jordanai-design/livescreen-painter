@@ -1,0 +1,18 @@
+{
+  "name": "livescreen-painter",
+  "version": "1.0.0",
+  "description": "Draw on your live screen with a transparent overlay",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && env -u ELECTRON_RUN_AS_NODE electron .",
+    "dev": "tsc && env -u ELECTRON_RUN_AS_NODE electron ."
+  },
+  "dependencies": {
+    "fabric": "^6.6.1"
+  },
+  "devDependencies": {
+    "electron": "^32.3.3",
+    "typescript": "^5.6.0"
+  }
+}

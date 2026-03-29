@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="toolbar.css">
+</head>
+<body>
+  <div class="toolbar">
+    <!-- Mode Toggle -->
+    <button id="mode-toggle" class="normal-mode">DRAW</button>
+
+    <div class="divider"></div>
+
+    <!-- Drawing Tools -->
+    <div class="tool-group">
+      <button id="tool-pen" class="tool-btn active" title="Pen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+      </button>
+      <button id="tool-rect" class="tool-btn" title="Rectangle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+      </button>
+      <button id="tool-circle" class="tool-btn" title="Circle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+      </button>
+      <button id="tool-line" class="tool-btn" title="Line">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="20" x2="20" y2="4"/></svg>
+      </button>
+      <button id="tool-arrow" class="tool-btn" title="Arrow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="20" x2="20" y2="4"/><polyline points="14,4 20,4 20,10"/></svg>
+      </button>
+      <button id="tool-text" class="tool-btn" title="Text">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,7 4,4 20,4 20,7"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+      </button>
+      <button id="tool-eraser" class="tool-btn" title="Eraser">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 20H7L3 16l9-9 9 9-4 4z"/><line x1="6" y1="11" x2="13" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Colors -->
+    <div class="color-group">
+      <div class="color-btn selected" data-color="#ff0000" style="background:#ff0000"></div>
+      <div class="color-btn" data-color="#ffcc00" style="background:#ffcc00"></div>
+      <div class="color-btn" data-color="#33cc33" style="background:#33cc33"></div>
+      <div class="color-btn" data-color="#0099ff" style="background:#0099ff"></div>
+      <div class="color-btn" data-color="#ffffff" style="background:#ffffff"></div>
+      <div class="color-btn" data-color="#000000" style="background:#000000; border: 1px solid #666"></div>
+      <div class="color-picker-wrapper">
+        <input type="color" id="custom-color" value="#ff6600" title="Custom color">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Size -->
+    <input type="range" class="size-slider" id="stroke-size" min="1" max="20" value="3">
+
+    <div class="divider"></div>
+
+    <!-- Actions -->
+    <div class="tool-group">
+      <button id="btn-undo" title="Undo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1,4 1,10 7,10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+      </button>
+      <button id="btn-redo" title="Redo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23,4 23,10 17,10"/><path d="M20.49 15a9 9 0 1 1-2.13-9.36L23 10"/></svg>
+      </button>
+      <button id="btn-save" class="action-btn" title="Save as PNG">SAVE</button>
+      <button id="btn-clear" class="action-btn clear-btn" title="Clear all">CLEAR</button>
+      <button id="btn-quit" class="action-btn quit-btn" title="Quit app">QUIT</button>
+    </div>
+  </div>
+
+  <script src="../../../dist/renderer/toolbar/toolbar.js"></script>
+</body>
+</html>
