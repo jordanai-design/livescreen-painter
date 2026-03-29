@@ -66,10 +66,6 @@ app.whenReady().then(() => {
     overlayWindow.webContents.send('do-clear');
   });
 
-  ipcMain.on('save-image', () => {
-    overlayWindow.webContents.send('do-save');
-  });
-
   ipcMain.on('quit-app', () => {
     app.quit();
   });
